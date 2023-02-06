@@ -1,0 +1,18 @@
+{
+  "cSpell.words": [
+    "codepaths",
+    "hstore",
+    "linebreak",
+    "prestart",
+    "tsbuildinfo"
+  ],
+  "eslint.workingDirectories": [
+    "./backend",
+    "./frontend"
+  ],
+  "files.exclude": {
+    "node_modules": true,
+    "backend/node_modules": true,
+    "frontend/node_modules": true
+  }
+}
