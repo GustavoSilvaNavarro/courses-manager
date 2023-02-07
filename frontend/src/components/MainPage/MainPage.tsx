@@ -27,8 +27,8 @@ export const MainPage = (): JSX.Element => {
   }
 
   return (
-    <div>
+    <>
       <CourseList coursesList={courses} />
-    </div>
+    </>
   );
 };
