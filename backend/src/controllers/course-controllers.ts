@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 
-import { addCourse, getSingleCourse } from '@/models/daos/course-daos';
+import { addCourse, getSingleCourse, getAllCourses } from '@/models/daos/course-daos';
 
 import { logger } from '@/utils/loggers';
 import { AppErrors } from '@/helpers/app-error';
@@ -25,6 +25,16 @@ export const retrieveSingleCourseData = async (
   try {
     const course = await getSingleCourse(req.params.courseId);
     return res.status(200).json(course);
+  } catch (err) {
+    logger.error((err as AppErrors).message);
+    next(err);
+  }
+};
+
+export const getListOfCourses = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const courseList = await getAllCourses();
+    return res.status(200).json(courseList);
   } catch (err) {
     logger.error((err as AppErrors).message);
     next(err);

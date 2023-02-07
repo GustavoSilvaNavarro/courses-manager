@@ -4,6 +4,7 @@
     "hstore",
     "linebreak",
     "prestart",
+    "tailwindcss",
     "tsbuildinfo"
   ],
   "eslint.workingDirectories": [

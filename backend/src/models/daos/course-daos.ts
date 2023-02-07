@@ -33,5 +33,11 @@ export const getSingleCourse = async (courseId: string) => {
     },
   });
 
-  return course;
+  if (course) return course;
+
+  throw new AppErrors({ message: 'Course does not exit', httpCode: HttpStatusCode.BAD_REQUEST, code: 3 });
+};
+
+export const getAllCourses = async () => {
+  return await CourseSchema.findAll({ attributes: { exclude: ['createdAt', 'updatedAt'] } });
 };
