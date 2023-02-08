@@ -12,3 +12,8 @@
 html, body {
   @apply bg-mate-black text-white;
 }
+
+#__next {
+  height: 100vh;
+  overflow-y: auto;
+}

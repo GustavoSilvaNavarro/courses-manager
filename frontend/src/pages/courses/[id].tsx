@@ -1,6 +1,7 @@
 import { GetServerSideProps } from 'next';
 
 import { getCourseDetails } from '@/services/course-services';
+import { CourseDetails } from '@/components/CourseDetails/CourseDetails';
 import { ICourseDetails } from '@/types/app-types';
 
 const SingleCourse = ({ course }: { course: ICourseDetails }) => {
@@ -14,7 +15,7 @@ const SingleCourse = ({ course }: { course: ICourseDetails }) => {
 
   return (
     <section>
-      <p>{course.courseName}</p>
+      <CourseDetails course={course} />
     </section>
   );
 };

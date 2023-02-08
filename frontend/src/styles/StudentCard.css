@@ -1,0 +1,24 @@
+.studentCard__container {
+  box-shadow: 0 4px 25px #e1e5ee;
+  border-radius: 10px;
+  background-color: white;
+  width: 200px;
+  height: 220px;
+}
+
+.studentContainer__details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.7rem 0.7rem;
+  color: black;
+}
+
+.studentContainer__image {
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
